@@ -1,35 +1,35 @@
     #include <iostream>
-     
+
     using namespace std;
-     
-     
-     
+
+
+
     struct node{
-                                                            // properties
+        // properties
         int val;
         node * next;
-                                                            // constructor
+        // constructor
         node(int x) {
             val = x;
             next = NULL;
         }
     };
-     
+
     struct mqueue{
-                                                            // constructor  
+        // constructor
         mqueue(){
             head = NULL;
             tail = NULL;
             cnt = 0;
         }
-                                                            // method
+        // method
         string push(int x){
             if (cnt < 100) {                                               // initial node instance
             node * item = new node(x);
-     
+
             if (head == NULL){
                 head = item;
-            }  
+            }
             if (tail != NULL){
                 tail -> next = item;                        // node.next set pointer 0x777c20
                                                             // cout << "tail -> next: " << tail -> next << "\n";
@@ -39,11 +39,11 @@
             }
             return "ok";
         }
-       
-       
-     
-     
-     
+
+
+
+
+
         int pop(){
             if (head != NULL) {
                 int x = head -> val;
@@ -55,7 +55,7 @@
                 }
             else { cout << "error";}
             }
-     
+
         void front(){
             if (head != NULL) {
                 int x = head -> val;
@@ -65,39 +65,39 @@
                 cout << "error";
             }
         }
-     
-     
+
+
         int size(){
             return cnt;
         }
-     
+
         string clear(){
             head = NULL;
             tail = NULL;
             cnt = 0;
             return "ok";
         }
-       
-     
+
+
         int exit(){
             cout << "bye" << '\n';
             return 1;
         }
-       
+
         // properties
         private:            // security properties
             node * head;
             node * tail;
             int cnt;
         };
-     
-     
-     
-     
-     
-     
+
+
+
+
+
+
     int main(){
-        mqueue q;  
+        mqueue q;
         string command;
         int no;
         while (command != "exit") {
@@ -111,4 +111,3 @@
         q.exit();
         return 0;
     }
-

@@ -22,7 +22,7 @@ struct heap {
 				swap(val[pos],val[ppos]);
 				return Sift_Up(ppos);
 				}
-			else 
+			else
 				return pos + 1;
 		}
 
@@ -46,7 +46,7 @@ struct heap {
 					}
 				}
 			return pos + 1; }		// ---
-						 
+
 		void push(int x){
 			val[size] = x;
 			cout << Sift_Up(size) << '\n';
@@ -54,7 +54,7 @@ struct heap {
 		}
 
         void print(){
-			for (int i = 0; i < size; i++){  
+			for (int i = 0; i < size; i++){
 				cout << val[i] << ' ';
 			}
 		}
@@ -69,7 +69,7 @@ struct heap {
 		int heap_size(){
 			return size + 1; // ---
 			}
-		
+
 
 		void extract_element(){
 			int res = val[0];			// get value of first element
@@ -86,17 +86,16 @@ struct heap {
 				cout << 0 << '\n';
 				cout << res << '\n';}
 
-			else 
+			else
 				cout << -1 << '\n'; }
 
 };
 int main(){
-
-	heap h; 
+	heap h;
 	int n, count ;
-	int t, x; 
+	int t, x;
 	cin >> n >> count;
-	for (int i = 0; i < count; i++) { 				-
+	for (int i = 0; i < count; i++) {
 		cin >> t;
 		if (t == 1) {
 				h.extract_element();
@@ -104,8 +103,9 @@ int main(){
 		else if (t == 2) {
 			cin >> x;
 			if (n > h.heap_size() - 1){
-				h.push(x); // h.print(); cout << '\n';
-			} else 
-				{ cout << -1 << '\n';}
-		} } 
-		h.print(); return 0; }
+				h.push(x);
+			} else { cout << -1 << '\n';}
+		}
+	}
+		h.print();
+		return 0; }

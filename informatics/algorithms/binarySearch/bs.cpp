@@ -1,7 +1,6 @@
-    #include <iostream>
-    #include<cstdlib>
-    using namespace std;
-
+#include <iostream>
+#include<cstdlib>
+using namespace std;
 
 
 
@@ -19,7 +18,8 @@ int  func(int a[],int l, int r, int k){
     }
     if (r == -1) return a[l];
     if (l != r) {
-      if (abs(a[r] - k) <= abs(a[l] - k)) return a[r]; return a[l];
+      if (abs(a[r] - k) <= abs(a[l] - k)) return a[r];
+      return a[l];
     }
     return a[l];
 }
@@ -32,10 +32,8 @@ int main(){
       cin >> n;
           a[i] = n;
   }
-
-
   for(int i = 0; i < K; ++i){
+
       cin >> k; cout << func(a,0,N-1,k) << '\n';
-    }
-    return 0;
+    } return 0;
   }
