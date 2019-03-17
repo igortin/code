@@ -6,12 +6,12 @@ class Solution {
     else if (root->val > val)
         return searchBST(root->left,val);
     return searchBST(root->right,val);
-}
-
-TreeNode* print_tree(TreeNode* root) {
-  if (root == NULL) return NULL;
-  print_tree(root->left);
-  cout << root->val<< ' ';
-  print_tree(root->right);
   }
+
+  TreeNode* print_tree(TreeNode* root) {
+    if (root == NULL) return NULL;
+    print_tree(root->left);
+    cout << root->val<< ' ';
+    print_tree(root->right);
+    }
 };
