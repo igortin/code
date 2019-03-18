@@ -19,6 +19,8 @@ int *pref(string s){
 	return p;
 
 }
+
+
 int main() {
   int n;
 	int count = 0;
