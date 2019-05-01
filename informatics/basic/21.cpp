@@ -8,12 +8,10 @@
 #include <cstring>
 using namespace std;
 int Count(string S) {
-  
     int i = 0; int n = 0;
-
     while (i < (int) S.length()){
-         if ((int) S[i] == 32 ){ n++ ;}
-         i++;
+       if ((int) S[i] == 32 ){ n++ ;}
+       i++;
     }
     cout << n + 1 << '\n';
     return n + 1;

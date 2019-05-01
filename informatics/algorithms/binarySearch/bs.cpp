@@ -23,17 +23,19 @@ int  func(int a[],int l, int r, int k){
     }
     return a[l];
 }
+
 int main(){
   int n,k,N,K;
   cin >> N;
   cin >> K;
-    int a[100002];
-    for(int i = 0; i < N; ++i){
-      cin >> n;
-          a[i] = n;
+  int a[100002];
+  for(int i = 0; i < N; ++i){
+    cin >> n;
+    a[i] = n;
   }
   for(int i = 0; i < K; ++i){
-
-      cin >> k; cout << func(a,0,N-1,k) << '\n';
-    } return 0;
-  }
+      cin >> k;
+      cout << func(a,0,N-1,k) << '\n';
+    }
+  return 0;
+}

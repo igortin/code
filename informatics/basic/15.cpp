@@ -9,7 +9,7 @@ int main(){
 	cin >> n;
 	int NN = n * 2;
 	div_t N;
-	N = div(NN, 60) ;  
-	
+	N = div(NN, 60);
 	printf("%s %d %s %d %s\n", "It is",N.quot,"hours", N.rem, "minutes.");
-  	return 0;}
+  return 0;
+	}

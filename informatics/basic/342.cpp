@@ -5,8 +5,15 @@
 
 
 using namespace std;
-int main() { int a; int n = 0; 
+int main() {
+	int a;
+	int n = 0;
 	freopen("input.txt","r",stdin);
-   	for (size_t i = 1; i <= 100; ++i ) {cin >> a; n = n + a;}
-   	
-   	cout << n << '\n'; return 0; }
+  for (size_t i = 1; i <= 100; ++i ){
+		cin >> a;
+		n = n + a;
+	}
+  cout << n << '\n';
+
+	return 0;
+}

@@ -16,7 +16,6 @@ struct heap{
       }
       void push(int x){
           value[size] = x;
-          // cout << sift_up(size) << '\n';
           size++;
           slice = size;
       }
@@ -32,17 +31,18 @@ struct heap{
       int sift_down(int p){				// negative
           int ch1 = 2 * p + 1;
           int ch2 = 2 * p + 2;
-
-          if(ch1 < size){
-              if(ch2 < size){
-                  if(value[p] < value[ch1] && value[ch1] >= value[ch2]){
+          if (ch1 < size){
+              if (ch2 < size){
+                  if (value[p] < value[ch1] && value[ch1] >= value[ch2]){
                       swap(value[p], value[ch1]);
                       return sift_down(ch1);
-                  }else if(value[p] < value[ch2] && value[ch2] > value[ch1]){
+                  }
+                  else if (value[p] < value[ch2] && value[ch2] > value[ch1]){
                       swap(value[p], value[ch2]);
                       return sift_down(ch2);
                   }
-              }else if(value[p] < value[ch1]){
+              }
+              else if (value[p] < value[ch1]){
                   swap(value[p], value[ch1]);
                   return sift_down(ch1);
               }
@@ -57,36 +57,40 @@ struct heap{
               cout << value[i] << " ";
           }
       }
-
-
-
-
-
-
-
-
-
-
 	void replace(){
 		if (slice == 1) return;
 		swap(value[0],value[slice-1]);
 		slice--;
 		}
+
+
 	void Build_Heap_dwn(){
 		if (slice == 1) return;
-		for (int i = slice/2 - 1; i > -1; i--){sift_down(i);}
+		for (int i = slice/2 - 1; i > -1; i--){
+      sift_down(i);
+    }
 	 }
+
 	void Build_Heap_up(){
 		if (slice == 1) return;
 		for (int i = 0; i < slice; i++){sift_up(i);}
 	}
- };
-int main(){
-  int n, k; heap h;
-  cin >> n;
-  for(int i = 0; i < n; ++i){ cin >> k; h.push(k); }
+};
 
-  for(int i = 0; i < n; ++i){h.Build_Heap_up(); h.replace();}
-  h.print(); cout << '\n';
+
+int main(){
+  int n, k;
+  heap h;
+  cin >> n;
+  for (int i = 0; i < n; ++i){
+    cin >> k;
+    h.push(k);
+  }
+  for (int i = 0; i < n; ++i){
+    h.Build_Heap_up();
+    h.replace();
+  }
+  h.print();
+  cout << '\n';
   return 0;
 }

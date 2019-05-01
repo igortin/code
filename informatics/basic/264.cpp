@@ -5,6 +5,12 @@
 #include <math.h>
 
 using namespace std;
-int main() { 
-	int k; cin >> k;  
-	if (k < 3 or k == 4 or k == 7) {cout << "NO" << '\n';} else { cout << "YES" << '\n';} return 0;}
+int main() {
+	int k;
+	cin >> k;
+	if (k < 3 or k == 4 or k == 7) {
+		cout << "NO" << '\n';
+	} else {
+		cout << "YES" << '\n';
+	}
+	return 0;}

@@ -26,54 +26,30 @@ map<string, vector<string>>& fill_dict(map<string, vector<string>>& d, int N){
 	}
 return d;
 }
+
 bool in_dict(const vector<string>& dict, const string &word){
 	for (int i = 0; i < dict.size(); ++i){
 	if (word == dict[i]){
 		return true;
 		}
 	}
-	return false;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	return false;
+}
 
 int count_upper(const string &s){
 	int cnt = 0;
-	for (int i = 0; i < s.size(); ++i)
-	{
+	for (int i = 0; i < s.size(); ++i){
 		if (isupper(s[i])) { ++cnt; }
 	}
-	return cnt;}
-
-
-
-
-
-
-
-
-
-
+	return cnt;
+}
 
 int check_work(const map<string, vector<string>>& dict){
-	int mistakes = 0; 
+	int mistakes = 0;
 	string word;
 	while (cin >> word){
 		if (count_upper(word) != 1) {
 			++mistakes;
-
 		}
 		else { string lower_case_word = to_lower_case(word);
 			   auto it = dict.find(lower_case_word);
@@ -81,13 +57,17 @@ int check_work(const map<string, vector<string>>& dict){
 			       ++mistakes;
 			   }
 			}
-		 }
-		 return mistakes;
-	}
+		}
+	return mistakes;
+}
+
+
 
 
 int main(){
-	std::map<string, std::vector<string>> dict; int N; cin >> N;
+	std::map<string, std::vector<string>> dict;
+	int N; cin >> N;
 	dict = fill_dict(dict,N);
 	cout << check_work(dict);
-	return 0;}
+	return 0;
+}

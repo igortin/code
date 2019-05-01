@@ -14,7 +14,6 @@ struct node {			// struct node
 		left = NULL;
 		right = NULL;
 	}
-
 };
 
 node * push(node * root, int v){
@@ -35,12 +34,10 @@ void print(node * root){
 	print(root->right);}						// call recurse with mem cell
 
 
-
 int get_h(node * root){
 	if (root == NULL) return 0;
 	int lh = get_h(root->left)  + 1;
 	int rh = get_h(root->right) + 1;
-
 	if (lh >= rh) return lh;
 	return rh;}
 
@@ -51,8 +48,6 @@ int main(){
 		if (v == 0) break;
 		tree = push(tree, v);
 	}
-	// cout << tree->val << '\n';
 	cout << get_h(tree) << '\n';
-
 return 0;
 }

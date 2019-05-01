@@ -15,44 +15,33 @@ struct point{
     }
   };
 
-vector <point> good; // good_77777777777777777777777777777777777777777777777777;
+vector <point> gootpoint;
 void nv(int a, int b){
     point s;
     s.a = a;
     s.b = b;
-    good.push_back(s);
+    gootpoint.push_back(s);
 }
 
 int main(){
     int a, b, n;
-    // float aa = 0, bb = 0;
-    // point c;
-    // int m = 0;
     cin >> n;
-    //if ( n > 2 and n < 101) {
-        for (int i = 0; i < n; ++i){
-            cin >> a;
-            cin >> b;
-            // if ( abs(a) > 1000 or abs(b) > 1000) {continue;}
-            nv(a,b);
-          }
+    for (int i = 0; i < n; ++i){
+        cin >> a;
+        cin >> b;
+        nv(a,b);
+    }
     double temp_a;
     double temp_b;
     double temp_l = 0, l = 0;
-
-
-
-
-
-    for (int i = 0; i < good.size(); ++i) {
-         for (int j = 0 ; j < good.size(); ++j){
-            for (int k = 0 ; k < good.size(); ++k){
-            temp_l =  (sqrt((good[i].a - good[j].a) * (good[i].a - good[j].a) + (good[i].b - good[j].b)*(good[i].b - good[j].b)) + sqrt((good[j].a - good[k].a) * (good[j].a - good[k].a) + (good[j].b - good[k].b)*(good[j].b - good[k].b)) + sqrt((good[i].a - good[k].a) * (good[i].a - good[k].a) + (good[i].b - good[k].b)*(good[i].b - good[k].b)));
+    for (int i = 0; i < gootpoint.size(); ++i) {
+         for (int j = 0 ; j < gootpoint.size(); ++j){
+            for (int k = 0 ; k < gootpoint.size(); ++k){
+            temp_l =  (sqrt((gootpoint[i].a - gootpoint[j].a) * (gootpoint[i].a - gootpoint[j].a) + (gootpoint[i].b - gootpoint[j].b)*(gootpoint[i].b - gootpoint[j].b)) + sqrt((gootpoint[j].a - gootpoint[k].a) * (gootpoint[j].a - gootpoint[k].a) + (gootpoint[j].b - gootpoint[k].b)*(gootpoint[j].b - gootpoint[k].b)) + sqrt((gootpoint[i].a - gootpoint[k].a) * (gootpoint[i].a - gootpoint[k].a) + (gootpoint[i].b - gootpoint[k].b)*(gootpoint[i].b - gootpoint[k].b)));
+            }
         }
     }
 
-  }
-  cout << temp_l << '\n'; // cout.precision(15); cout << N + l << '\n';
-
+    cout << temp_l << '\n';
     return 0;
   }

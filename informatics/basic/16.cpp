@@ -9,9 +9,13 @@ int main(){
 	cin >> k;
 	cin >> n;
 	div_t N;
-	N = div(n, k) ;  
+	N = div(n, k) ;
 
-	if (N.rem > 0) {cout << N.quot + 1<< endl; cout << N.rem << endl;}
-	else {	cout << N.quot << endl; cout << k << endl;}
-  	return 0;
-  }
+	if (N.rem > 0) {
+		cout << N.quot + 1<< endl; cout << N.rem << '\n';
+	}
+	else {
+		cout << N.quot << endl; cout << k << endl;
+	}
+  return 0;
+}

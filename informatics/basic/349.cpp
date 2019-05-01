@@ -5,6 +5,21 @@
 
 
 using namespace std;
-int main() { int a,b,c,v; int N; string P = "";  
-	freopen("input.txt","r",stdin); cin >> a; cin >> b; cin >> c; cin >> v;
-   	for (size_t i = 1000 ; i < -1; --i ) { N = a * i * i * i + b * i * i + c * i + v; if (N == 0) { cout << i << ' ';}}    return 0; }
+
+int main() {
+	int a,b,c,v,N;
+	string P = "";
+	freopen("input.txt","r",stdin);
+	cin >> a;
+	cin >> b;
+	cin >> c;
+	cin >> v;
+
+  for (size_t i = 1000 ; i < -1; --i ){
+		N = a * i * i * i + b * i * i + c * i + v;
+		if (N == 0) {
+			cout << i << ' ';
+		}
+	}
+	return 0;
+}

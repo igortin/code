@@ -14,9 +14,7 @@ struct node {			// struct node
 		left = NULL;
 		right = NULL;
 	}
-
 };
-
 
 node * push(node * root, int v){
 	if (root == NULL) return new node(v);
@@ -33,18 +31,16 @@ void print(node * root){
 	if (root == NULL) return;
 	print(root->left);
 	cout<< root->val << ' ';
-	print(root->right);}
-
-
+	print(root->right);
+}
 
 int get_n(node * root){
 	if (root == NULL) return 0;
 	int count = 1;
-
 	count += get_n(root->left);
 	count += get_n(root->right);
 	return count;
-	}
+}
 
 int main(){
 	int v;

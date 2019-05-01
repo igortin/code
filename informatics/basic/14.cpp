@@ -10,7 +10,7 @@ int main(){
 	div_t N;
 	N = div(n, 3600);
 	div_t NN;
-	
-	NN = div(N.rem, 60); 
+	NN = div(N.rem, 60);
 	printf("%s %d %s %d %s\n", "It is",N.quot,"hours", NN.quot, "minutes.");
-  	return 0;}
+  return 0;
+}

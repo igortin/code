@@ -5,29 +5,27 @@ using namespace std;
 
 
 struct node{
-                                                        // properties
+    // properties
     int val;
     node * next;
-                                                        // constructor
+    // constructor
     node(int x) {
         val = x;
         next = NULL;
     }
-
 };
 
 struct mqueue{
-                                                        // constructor
+    // constructor
     mqueue(){
         head = NULL;
         tail = NULL;
         cnt = 0;
     }
-                                                        // method
+    // method
     string push(int x){
-                                                        // initial node instance
+    // initial node instance
         node * item = new node(x);
-
         if (head == NULL){
             head = item;
         }
@@ -39,10 +37,6 @@ struct mqueue{
         cnt = cnt + 1;
         return "ok";
     }
-
-
-
-
     int pop(){
         if (head != NULL) {
             int x = head -> val;
@@ -63,11 +57,13 @@ struct mqueue{
             cout << "error";
         }
     }
-
-
     int size(){
         return cnt;
     }
+
+
+
+
     string clear(){
         head = NULL;
         tail = NULL;
@@ -78,21 +74,25 @@ struct mqueue{
         cout << "bye" << '\n';
         return 1;
     }
-    // properties
-    private:            // security properties
+    // security properties
+    private:
         node * head;
         node * tail;
         int cnt;
-    };
+};
+
 int main(){
-    mqueue q; string command; int c;
+    mqueue q;
+    string command;
+    int c;
     while (command != "exit") {
-        cin >> command;
-        if (command == "front") { q.front(); cout << '\n'; }
-        else if (command == "pop") { q.pop(); cout << '\n'; }
-        else if (command == "clear"){cout << q.clear() << '\n'; }
-        else if (command == "push"){cin >> c; cout << q.push(c) << '\n';}
-        else if (command == "size") {cout << q.size() << '\n';}
+      cin >> command;
+      if (command == "front") { q.front(); cout << '\n'; }
+      else if (command == "pop") { q.pop(); cout << '\n'; }
+      else if (command == "clear"){cout << q.clear() << '\n'; }
+      else if (command == "push"){cin >> c; cout << q.push(c) << '\n';}
+      else if (command == "size") {cout << q.size() << '\n';}
     }
-    q.exit(); return 0;
-  }
+    q.exit();
+    return 0;
+}

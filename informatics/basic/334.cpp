@@ -7,14 +7,14 @@
 using namespace std;
 int main() {
     int a,b,c,n;
-    cin >> a; 
-    cin >> b; 
-    cin >> c; 
-    cin >> n; 
-
+    cin >> a;
+    cin >> b;
+    cin >> c;
+    cin >> n;
     for ( a ; a <=  b; ++a ){
-        if ( a % n == c ){ 
+        if ( a % n == c ){
             cout << a << " ";
         }
     }
-    return 0;}
+    return 0;
+}

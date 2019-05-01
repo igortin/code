@@ -33,13 +33,14 @@ struct heap{
                 if(ch2 < size){
                     if(value[p] < value[ch1] && value[ch1] >= value[ch2]){
                         swap(value[p], value[ch1]);
-
                         return sift_down(ch1);
-                    }else if(value[p] < value[ch2] && value[ch2] > value[ch1]){
+                    }
+                    else if (value[p] < value[ch2] && value[ch2] > value[ch1]){
                         swap(value[p], value[ch2]);
                         return sift_down(ch2);
                     }
-                }else if(value[p] < value[ch1]){
+                }
+                else if (value[p] < value[ch1]){
                     swap(value[p], value[ch1]);
                     return sift_down(ch1);
                 }
@@ -49,22 +50,18 @@ struct heap{
         int length(){
             return size;
         }
-
        void print(){
             for(int i = 0; i < size; ++i){
                 cout << value[i] << " ";
             }
-        }
-
-		int extract(){
-			int k = value[0];
-			value[0] = value[size-1];
-			size --;
-			// sift_down(0);
-			return k; }
-
-
-
+      }
+  		int extract(){
+  			int k = value[0];
+  			value[0] = value[size-1];
+  			size --;
+  			// sift_down(0);
+  			return k;
+      }
 
 
 		void Build_Heap_dwn(){
@@ -73,20 +70,28 @@ struct heap{
 		 }
 		void Build_Heap_up(){
 			if (size == 1) return;
-			for (int i = 0; i < size ; i++){ sift_up(i);
+			for (int i = 0; i < size ; i++){
+        sift_up(i);
 				 }
 		 }
  };
 
 int main(){
-    int n, k; heap h;
+    int n, k;
+    heap h;
     cin >> n;
     int negative[n - 1];
-    for(int i = 0; i < n; ++i){
+    for (int i = 0; i < n; ++i){
      	cin >> k;
-     	h.push(k);}
+     	h.push(k);
+    }
 	for (int i = 0; i < n; i++){
-		h.Build_Heap_dwn(); h.print(); cout << '\n';
-	 	negative[i]=(h.extract());}
+		h.Build_Heap_dwn();
+    h.print();
+    cout << '\n';
+	 	negative[i]=(h.extract());
+  }
 	for (int i = n - 1; i > -1; i--) cout << negative[i] << ' ';
-return 0;}
+
+return 0;
+}

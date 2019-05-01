@@ -24,7 +24,9 @@ void get_root(float a, int n, float l, float r){
 
 int main(){
   float a,n;
-  cin >> a; cin >> n;
-  get_root(a,n,0,1002); printf("%1.11f\n", x);
+  cin >> a;
+  cin >> n;
+  get_root(a,n,0,1002);
+  printf("%1.11f\n", x);
   return 0;
 }

@@ -6,5 +6,10 @@
 
 using namespace std;
 int main() {
-    int x; cin >> x; for (int i = 1; pow(2,i) < x; ++i) { cout << pow(2,i) << '\n'; }
-    return 0;}
+    int x;
+    cin >> x;
+    for (int i = 1; pow(2,i) < x; ++i) {
+      cout << pow(2,i) << '\n';
+    }
+    return 0;
+  }
