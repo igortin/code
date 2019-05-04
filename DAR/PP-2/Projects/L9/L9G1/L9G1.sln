@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28527.54
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaintApp", "PaintApp\PaintApp.csproj", "{AFA815EC-DBE0-4DA9-AFFC-C5B2971CE0A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example1", "Example1\Example1.csproj", "{157AE00B-4D7F-42A1-867A-B6098A89CF43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example2", "Example2\Example2.csproj", "{D0A0811D-A126-425F-800A-AAD24F469356}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFA815EC-DBE0-4DA9-AFFC-C5B2971CE0A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFA815EC-DBE0-4DA9-AFFC-C5B2971CE0A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFA815EC-DBE0-4DA9-AFFC-C5B2971CE0A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFA815EC-DBE0-4DA9-AFFC-C5B2971CE0A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{157AE00B-4D7F-42A1-867A-B6098A89CF43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{157AE00B-4D7F-42A1-867A-B6098A89CF43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{157AE00B-4D7F-42A1-867A-B6098A89CF43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{157AE00B-4D7F-42A1-867A-B6098A89CF43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0A0811D-A126-425F-800A-AAD24F469356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0A0811D-A126-425F-800A-AAD24F469356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0A0811D-A126-425F-800A-AAD24F469356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0A0811D-A126-425F-800A-AAD24F469356}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {432B862A-5C0F-4ECE-A45E-2231F34BD3DE}
+	EndGlobalSection
+EndGlobal
